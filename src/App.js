@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import NavBar from "./components/NavBar";
+import SpeciesTable  from "./components/SpeciesTable"
+import Container from '@material-ui/core/Container';
+function App (){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <br />
+      <main>
+        <Container>
+          <SpeciesTable />
+        </Container>
+      </main>
+      <br />
+      <br />
+      <pre>
+      IUCN 2020. IUCN Red List of Threatened Species. Version 2020-1 <a href="https://www.iucnredlist.org">&lt;www.iucnredlist.org&gt;</a>
+      </pre>
     </div>
-  );
+  )
 }
-
 export default App;
